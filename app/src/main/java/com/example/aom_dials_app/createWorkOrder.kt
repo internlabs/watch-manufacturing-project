@@ -24,6 +24,8 @@ class createWorkOrder : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_work_order)
 
+        supportActionBar?.hide()
+
         Material_Dropdown()
         BaseColorDropdown()
         FinishDropdown()
