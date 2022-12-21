@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">AOM_DIALS_APP</string>
+    <string name="statistics">Statistics</string>
+    <string name="search_an_order">Search an order</string>
+    <string name="creating_a_new_order">Creating a new order:</string>
+    <string name="model_number">⦿Model Number:</string>
+    <string name="material">⦿Material:</string>
+    <string name="order_date">⦿Order Date:</string>
+    <string name="base_color">⦿Base Color:</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="case_opening">⦿Case Opening:</string>
+    <string name="printing_od">⦿Printing OD:</string>
+    <string name="total_quantity">⦿Total Quantity:</string>
+    <string name="finish">⦿Finish:</string>
+    <string name="generate">Generate</string>
+
+
+    <string-array name="material_array">
+        <item>Brass</item>
+        <item>Copper</item>
+    </string-array>
+
+    <string-array name="basecolor_array">
+        <item>Silver</item>
+        <item>Black</item>
+        <item>Gold</item>
+        <item>Copper</item>
+    </string-array>
+
+    <string-array name="finish_array">
+        <item>Sunray</item>
+        <item>Deplating</item>
+    </string-array>
+</resources>
