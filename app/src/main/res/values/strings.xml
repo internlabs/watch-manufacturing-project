@@ -13,6 +13,8 @@
     <string name="total_quantity">⦿Total Quantity:</string>
     <string name="finish">⦿Finish:</string>
     <string name="generate">Generate</string>
+    <string name="department_wise_statistics">⦿Department wise statistics:</string>
+    <string name="result">Please select an option</string>
 
 
     <string-array name="material_array">
@@ -31,4 +33,16 @@
         <item>Sunray</item>
         <item>Deplating</item>
     </string-array>
+
+    <string-array name="statistics_array">
+        <item>Mechanical</item>
+        <item>Electroplating</item>
+        <item>Lacquer</item>
+        <item>Screen Printing</item>
+        <item>Digital Printing</item>
+        <item>Assembly 1</item>
+        <item>Assembly 2</item>
+        <item>Dispatch</item>
+    </string-array>
+
 </resources>

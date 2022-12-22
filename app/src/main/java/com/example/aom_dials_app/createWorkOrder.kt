@@ -1,6 +1,7 @@
 package com.example.aom_dials_app
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -100,9 +101,11 @@ class createWorkOrder : AppCompatActivity() {
         id2.setText(sdf.format(calender.time))
     }
 
-    fun showToastMessage(view: View) {
+    fun onGenerateButtonClicked(view: View) {
         val text = "Work Order Generated Successfully!"
         val toast = Toast.makeText(this,text,Toast.LENGTH_LONG)
         toast.show()
+        val intent = Intent(this@createWorkOrder,Home_Activity::class.java)
+        startActivity(intent)
     }
 }

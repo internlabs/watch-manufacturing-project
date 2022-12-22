@@ -17,4 +17,9 @@ class Home_Activity : AppCompatActivity() {
         val intent = Intent(this@Home_Activity,createWorkOrder::class.java)
         startActivity(intent)
     }
+
+    fun onStatisticsButtonClicked(view: View) {
+        val intent = Intent(this@Home_Activity,Statistics::class.java)
+        startActivity(intent)
+    }
 }
