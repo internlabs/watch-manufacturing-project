@@ -15,6 +15,8 @@
     <string name="generate">Generate</string>
     <string name="department_wise_statistics">⦿Department wise statistics:</string>
     <string name="result">Please select an option</string>
+    <string name="choose_image">⦿Choose Image</string>
+    <string name="select">Select</string>
 
 
     <string-array name="material_array">

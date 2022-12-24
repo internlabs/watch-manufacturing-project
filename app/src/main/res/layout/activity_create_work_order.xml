@@ -246,17 +246,51 @@
 
             <Button
                 android:id="@+id/generateButton"
-                android:layout_width="147dp"
-                android:layout_height="46dp"
+                android:layout_width="146dp"
+                android:layout_height="68dp"
                 android:layout_marginTop="16dp"
                 android:onClick="onGenerateButtonClicked"
                 android:text="@string/generate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintHorizontal_bias="0.539"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/finishDropdown"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/selectedImagePreview"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/selectImageText"
+                android:layout_width="413dp"
+                android:layout_height="45dp"
+                android:text="@string/choose_image"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finishDropdown" />
+
+            <Button
+                android:id="@+id/selectButton"
+                android:layout_width="104dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/select"
+                app:layout_constraintBottom_toTopOf="@id/generateButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectImageText"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/selectedImagePreview"
+                android:layout_width="185dp"
+                android:layout_height="164dp"
+                app:layout_constraintBottom_toTopOf="@id/generateButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectButton"
+                app:layout_constraintVertical_bias="0.339"
+                tools:srcCompat="@tools:sample/avatars" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

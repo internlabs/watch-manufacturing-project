@@ -9,7 +9,7 @@ import retrofit2.http.Query
 const val BASE_URL= "https://newsapi.org/"
 const val API_KEY = "ac1ea72177d34cbb948ca03ca9b3290c"
 
-interface NewsInterface {
+interface ApiInterface {
     //here we will be declaring our get requests
     //https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=ac1ea72177d34cbb948ca03ca9b3290c
     @GET("/v2/top-headlines?sources=techcrunch&apiKey=$API_KEY")   //GET ANNOTATION TO SPECIFY WE ARE MAKING A GET REQUEST
@@ -17,8 +17,8 @@ interface NewsInterface {
     fun Getdata(@Query("page")page : Int): Call<MyData>
 }
 
-object ApiInterface {
-    val newsInstance: NewsInterface
+object DataInterface{
+    val dataInstance: ApiInterface
 
     init {
         //create retrofit builder obj
@@ -26,6 +26,6 @@ object ApiInterface {
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
-        newsInstance = retrofitbuilder.create(NewsInterface::class.java)
+        dataInstance = retrofitbuilder.create(ApiInterface::class.java)
     }
 }

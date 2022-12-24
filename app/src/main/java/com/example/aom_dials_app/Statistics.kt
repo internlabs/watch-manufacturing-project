@@ -63,13 +63,13 @@ class Statistics : AppCompatActivity() {
 
 
     private fun fetchData() {
-        val news = ApiInterface.newsInstance.Getdata(1)
-        news.enqueue(object : Callback<MyData> {
+        val order = DataInterface.dataInstance.Getdata(1)
+        order.enqueue(object : Callback<MyData> {
             override fun onResponse(call: Call<MyData>, response: Response<MyData>) {
-                val news = response.body()
-                if (news != null) {
-                    Log.d("AOM DIALS", news.toString())
-                    adapter = StatisticsAdapter(this@Statistics, news.articles)
+                val order = response.body()
+                if (order != null) {
+                    Log.d("AOM DIALS", order.toString())
+                    adapter = StatisticsAdapter(this@Statistics, order.articles)
                     val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
                     recyclerView.adapter=adapter
                     recyclerView.layoutManager=LinearLayoutManager(this@Statistics)

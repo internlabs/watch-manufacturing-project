@@ -2,24 +2,28 @@ package com.example.aom_dials_app
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import java.text.SimpleDateFormat
-import java.time.Month
-import java.time.Year
 import java.util.*
 
 class createWorkOrder : AppCompatActivity() {
 
     private lateinit var id1:TextView
     private lateinit var id2:TextView
+    private lateinit var selectImageButton: Button
+    private lateinit var selectedImage:ImageView
+
+    companion object{
+        const val IMAGE_REQUEST_CODE = 100
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +34,12 @@ class createWorkOrder : AppCompatActivity() {
         Material_Dropdown()
         BaseColorDropdown()
         FinishDropdown()
+        selectImageButton = findViewById(R.id.selectButton)
+        selectedImage=findViewById(R.id.selectedImagePreview)
+
+        selectImageButton.setOnClickListener{
+            imagePicker()
+        }
 
     }
 
@@ -107,5 +117,18 @@ class createWorkOrder : AppCompatActivity() {
         toast.show()
         val intent = Intent(this@createWorkOrder,Home_Activity::class.java)
         startActivity(intent)
+    }
+
+    fun imagePicker() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type="image/*"
+        startActivityForResult(intent, IMAGE_REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode== IMAGE_REQUEST_CODE && resultCode== RESULT_OK){
+            selectedImage.setImageURI(data?.data)
+        }
     }
 }

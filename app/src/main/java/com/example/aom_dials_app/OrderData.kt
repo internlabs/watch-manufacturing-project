@@ -1,11 +1,12 @@
 package com.example.aom_dials_app
 
-data class News(
+data class Orders(
     val title : String,
-    val description : String
+    val description : String,
+    val urlToImage : String
 )
 
 data class MyData(
     val totalResults:Int,
-    val articles:List<News>
+    val articles:List<Orders>
 )
