@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Statistics">
+    tools:context=".orders.Statistics"
+    android:background="@color/gray">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -15,16 +16,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="407dp"
-                android:layout_height="62dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/department_wise_statistics"
                 android:textAlignment="center"
-                android:textColor="@color/purple_700"
+                android:textColor="@color/jasmine"
                 android:textSize="25sp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/statisticsDropdown"
                 app:layout_constraintHorizontal_bias="0.666"
@@ -35,9 +37,9 @@
 
             <Spinner
                 android:id="@+id/statisticsDropdown"
-                android:layout_width="414dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:background="@android:drawable/btn_dropdown"
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,14 +47,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/statisticsText"
-                android:layout_width="410dp"
-                android:layout_height="62dp"
+            <Button
+                android:id="@+id/showOrdersButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showDeptwiseStatistics"
                 android:layout_marginTop="8dp"
+                android:text="@string/show_orders"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/jasmine"
                 android:textAlignment="center"
-                android:textSize="25sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.965"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,14 +64,14 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/statisticsRecyclerView"
-                android:layout_width="403dp"
-                android:layout_height="685dp"
-                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.271"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/statisticsText" />
+                app:layout_constraintTop_toBottomOf="@+id/showOrdersButton"
+                app:layout_constraintVertical_bias="0.043" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
