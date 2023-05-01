@@ -196,7 +196,7 @@ fun onNextButtonClicked(view: View) {
             bundle.putString("orderDate",orderDate)
             bundle.putString("partyName",partyName)
             bundle.putString("baseFeatures",baseFeatures)
-            bundle.putInt("extraQty",extraQty)
+            bundle.putInt("extraQty", extraQty)
             bundle.putString("extraFeatures",extraFeatures)
             bundle.putDouble("size",size)
             bundle.putString("material",material)
